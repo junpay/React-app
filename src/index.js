@@ -11,6 +11,7 @@ import * as serviceWorker from './serviceWorker';
 const store = createStore(reducer)
 
 ReactDOM.render(
+  // Storeをどのcomponentからも利用できるように既存のcomponentをProviderコンポーネントでwrapし、store属性に作成したstoreを指定する。
   <Provider store={store}>
     <App />
   </Provider>,
